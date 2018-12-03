@@ -15,7 +15,7 @@ import math
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-    print_cosines()
+    draw_circles1()
 
 def print_sequence1():
     """
@@ -63,7 +63,9 @@ def draw_circles1():
     window = rg.RoseWindow(400,400)
     for k in range(21):
         r=k*2
-        rg.Circle(rg.Point(200,200),r)
+        circle = rg.Circle(rg.Point(200,200),r)
+        circle.attach_to(window)
+
     window.close_on_mouse_click()
 
 
