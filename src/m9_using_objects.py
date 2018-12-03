@@ -5,7 +5,7 @@ This module lets you practice  ** using objects **, including:
   -- accessing their DATA via INSTANCE VARIABLES
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Zachary Juday.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
@@ -14,7 +14,7 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
+    two_circles()
 
 def two_circles():
     """
@@ -33,6 +33,14 @@ def two_circles():
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # -------------------------------------------------------------------------
+    window = rg.RoseWindow(200,200)
+    circle1 = rg.Circle(rg.Point(50,100),40)
+    circle1.fill_color = 'blue'
+    circle2 = rg.Circle(rg.Point(150,100),20)
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 
 def circle_and_rectangle():
